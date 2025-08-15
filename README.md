@@ -121,7 +121,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 import torch
 torch.manual_seed(30)
 
-model_id = "DeepSeek-Prover-V2-7B"  # or DeepSeek-Prover-V2-671B
+model_id = "deepseek-ai/DeepSeek-Prover-V2-7B"  # or deepseek-ai/DeepSeek-Prover-V2-671B
 tokenizer = AutoTokenizer.from_pretrained(model_id)
 
 formal_statement = """
@@ -132,7 +132,7 @@ set_option maxHeartbeats 0
 
 open BigOperators Real Nat Topology Rat
 
-/-- What is the positive difference between $120\%$ of 30 and $130\%$ of 20? Show that it is 10.-/
+/-- What is the positive difference between $120%$ of 30 and $130%$ of 20? Show that it is 10.-/
 theorem mathd_algebra_10 : abs ((120 : ℝ) / 100 * 30 - 130 / 100 * 20) = 10 := by
   sorry
 """.strip()
